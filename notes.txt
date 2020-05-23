@@ -1,0 +1,26 @@
+# tar
+list contents
+tar -tvf archive.tar
+tar -ztvf archive.tar.gz
+tar -jtvf tar.bz2
+
+untar
+tar -xvf archive.tar
+tar -xvzf archive.tar.gz
+tar -xvjf archive.tar.bz2
+
+# sftp
+https://www.computerhope.com/unix/sftp.htm
+
+get a file or dir
+sftp user@host:targetDir/target.zip
+
+get a file w/ specific output path. Rename it by specifying the filename at end of destination.
+sftp user@host:targetDir/target.zip /Downloads
+
+# drives
+Where is that god dang drive? How big is it? What the hell do I mount?
+lsblk 
+(list block devices)
+df -TH 
+(H flag makes it human readable)
