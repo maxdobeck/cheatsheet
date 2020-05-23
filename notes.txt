@@ -24,3 +24,31 @@ lsblk
 (list block devices)
 df -TH 
 (H flag makes it human readable)
+
+mounting (simple)
+sudo mount /dev/your_drive /home/a_user/some/place
+-t if you have to specify 
+the device's type.  FAT, etc
+Mount just takes a device's file structure and attaches it to your local file tree. You get to pick the name/place where it is attached and accessible.
+
+mounting (oh shit)
+something didn't work? 
+- dmesg (any bad juju from the kernel gets picked up here)
+- lsblk to confirm you have the right device.  Triple check
+- df -TH to again confirm, check the FREE SPACE is what you expect
+mess with lsblk & df as needed
+- mount (to see what's current. lots of output, maybe not useful)
+
+unmount
+sudo umount /dir/you/mounted
+
+# vim
+$:	jump to end of cur line
+g_:	jump to final non-blank char at end of line 
+^:	jump to first non-blank char at start of line
+0:	jump to start of line
+
+
+# shell
+use vim like commands on command line
+set -o vi
