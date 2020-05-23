@@ -1,0 +1,22 @@
+- article about electron change Origin Header via OnBeforeSendHeaders
+- article about how Cargo uploads your craate to crates.io
+- article about API authentication via tokens
+- articel how to ls a Tarball
+- discussion on this blog post: https://cloud.google.com/blog/topics/inside-google-cloud/google-cloud-support-engineer-solves-a-tough-dns-case
+
+# bup
+command-line-utilities, filesystem
+Backup some files with plain old tar, restore some files from backup. Tar is a dependency.
+
+TOML config
+backup: CSV list of full path to file or dir.  ASSUMING you are in the `~` home directory if full path not present.
+exclude: path to exlusion `.txt` file.  blacklist of things to ignore, passed directly to tar. Can generate this file with popular options (basically .gitignore on github)
+dest-ip: ip address for destination to move to
+dest-s3: s3 type auth.
+dest-local: full path to destination on current machine
+
+### Execuation steps
+1. tar the target files
+2. generate checksum from step 1 output
+3. compare checksum against dest
+4. replace any tarballs if the checksums don't match
