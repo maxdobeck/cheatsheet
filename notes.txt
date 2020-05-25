@@ -52,3 +52,9 @@ g_:	jump to final non-blank char at end of line
 # shell
 use vim like commands on command line
 set -o vi
+
+# ssh
+am I locked out? Did someone try to login?
+cat /var/log/auth.log
+| grep 'Failed' to see if the auth failed due to bad pwd.
+
