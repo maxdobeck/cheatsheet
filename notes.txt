@@ -31,15 +31,15 @@ sudo mount /dev/your_drive /home/a_user/some/place
 the device's type.  FAT, etc
 Mount just takes a device's file structure and attaches it to your local file tree. You get to pick the name/place where it is attached and accessible.
 
-mounting (oh shit)
-something didn't work? 
+mounting (oh shit, something went wrong)
+something didn't work?
 - dmesg (any bad juju from the kernel gets picked up here)
 - lsblk to confirm you have the right device.  Triple check
 - df -TH to again confirm, check the FREE SPACE is what you expect
 mess with lsblk & df as needed
 - mount (to see what's current. lots of output, maybe not useful)
 
-unmount
+unmount and remove drive
 sudo umount /dir/you/mounted
 
 # vim
@@ -56,5 +56,12 @@ set -o vi
 # ssh
 am I locked out? Did someone try to login?
 cat /var/log/auth.log
-| grep 'Failed' to see if the auth failed due to bad pwd.
+"| grep 'Failed'" to see if the auth failed due to bad pwd.
 
+# sublime
+open a file from cli
+subl .
+subl my-file.txt
+
+-n or --new-window:	Open a new window
+-a or --add:		Add folders to the current window
