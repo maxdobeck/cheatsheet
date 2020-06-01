@@ -68,6 +68,7 @@ subl my-file.txt
 
 # Fallacies of Distributed Computing
 https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+See also: https://codahale.com/you-cant-sacrifice-partition-tolerance/
 
 The fallacies are
     The network is reliable;
