@@ -65,3 +65,32 @@ subl my-file.txt
 
 -n or --new-window:	Open a new window
 -a or --add:		Add folders to the current window
+
+# Fallacies of Distributed Computing
+https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+
+The fallacies are
+    The network is reliable;
+    Latency is zero;
+    Bandwidth is infinite;
+    The network is secure;
+    Topology doesn't change;
+    There is one administrator;
+    Transport cost is zero;
+    The network is homogeneous.
+
+Software applications are written with little error-handling on networking errors. During a network outage, such applications may stall or infinitely wait for an answer packet, permanently consuming memory or other resources. When the failed network becomes available, those applications may also fail to retry any stalled operations or require a (manual) restart.
+
+Ignorance of network latency, and of the packet loss it can cause, induces application- and transport-layer developers to allow unbounded traffic, greatly increasing dropped packets and wasting bandwidth.
+
+Ignorance of bandwidth limits on the part of traffic senders can result in bottlenecks.
+
+Complacency regarding network security results in being blindsided by malicious users and programs that continually adapt to security measures.
+
+Changes in network topology can have effects on both bandwidth and latency issues, and therefore can have similar problems.
+
+Multiple administrators, as with subnets for rival companies, may institute conflicting policies of which senders of network traffic must be aware in order to complete their desired paths.
+
+The "hidden" costs of building and maintaining a network or subnet are non-negligible and must consequently be noted in budgets to avoid vast shortfalls.
+
+If a system assumes a homogeneous network, then it can lead to the same problems that result from the first three fallacies.
